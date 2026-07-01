@@ -1,269 +1,96 @@
-# Mutual Fund Analytics
+# 📊 Mutual Fund Analytics
 
 ## Bluestock Fintech Capstone Project
 
-An end-to-end Mutual Fund Analytics project developed as part of the Bluestock Fintech Data Analyst Internship. This project demonstrates the complete Data Analytics lifecycle including data ingestion, cleaning, database design, SQL analytics, exploratory data analysis, Power BI dashboard development, advanced financial analytics, and investor behavior analysis using Python, SQL, SQLite, and Power BI.
+A comprehensive end-to-end Data Analytics project focused on Mutual Fund performance, NAV analysis, investor behaviour, portfolio analytics, and risk metrics using **Python, SQL, SQLite, Power BI, and Pandas**.
 
 ---
 
 # Project Overview
 
-The objective of this project is to analyze mutual fund data and generate meaningful business insights related to:
+This project follows a complete Data Analytics workflow from raw data ingestion to interactive dashboard development.
 
-- Mutual Fund Performance
-- NAV Trends
-- Investor Transactions
-- AUM Distribution
-- Portfolio Holdings
-- SIP Behaviour
-- Risk Metrics
-- Portfolio Diversification
-- Investor Cohort Analysis
+The project includes:
 
-The project follows a complete end-to-end analytics workflow from raw data to business intelligence dashboards and advanced financial analysis.
-
----
-
-# Project Workflow
-
-- Data Ingestion (ETL)
+- ETL Pipeline
 - Data Cleaning & Validation
 - SQLite Database Design
 - SQL Analytics
 - Exploratory Data Analysis (EDA)
 - Performance Analytics
-- Power BI Dashboard Development
-- Advanced Financial Analytics
-- Risk Metrics
-- Fund Recommendation System
-- Documentation & Reporting
+- Advanced Risk Analytics
+- Interactive Power BI Dashboard
+- Final Reporting
+
+---
+
+# Project Workflow
+
+```
+Raw Data
+     │
+     ▼
+ETL Pipeline
+     │
+     ▼
+Data Cleaning
+     │
+     ▼
+SQLite Database
+     │
+     ▼
+SQL Analysis
+     │
+     ▼
+EDA & Performance Analytics
+     │
+     ▼
+Advanced Analytics
+     │
+     ▼
+Power BI Dashboard
+     │
+     ▼
+Final Report
+```
 
 ---
 
 # Project Structure
 
-```text
+```
 Mutual_Fund_Analytics/
-│
-├── dashboard/
-│   └── Mutual_Fund_Analytics_Dashboard.pbix
 │
 ├── data/
 │   ├── raw/
-│   └── processed/
+│   ├── processed/
+│   └── db/
+│       └── bluestock_mf.db
 │
 ├── notebooks/
-│   ├── EDA_Analysis.ipynb
-│   ├── Performance_Analytics.ipynb
-│   └── Advanced_Analytics.ipynb
+│   ├── 03_eda_analysis.ipynb
+│   ├── 04_performance_analytics.ipynb
+│   └── 05_advanced_analytics.ipynb
 │
-├── reports/
-│   ├── benchmark_comparison.png
-│   ├── rolling_sharpe_chart.png
-│   ├── top10_funds.png
-│   ├── var_cvar_report.csv
-│   ├── cohort_analysis.csv
-│   ├── sip_continuity_analysis.csv
-│   ├── sector_hhi_analysis.csv
-│   ├── alpha_beta.csv
-│   ├── fund_scorecard.csv
-│   └── data_dictionary.md
+├── scripts/
+│   ├── etl_pipeline.py
+│   ├── data_cleaning.py
+│   ├── compute_metrics.py
+│   ├── live_nav_fetch.py
+│   └── recommender.py
 │
 ├── sql/
 │   ├── schema.sql
 │   └── queries.sql
 │
-├── data_ingestion.py
-├── live_nav_fetch.py
-├── data_cleaning.py
-├── database_load.py
-├── recommender.py
-├── bluestock_mf.db
-├── requirements.txt
-└── README.md
+├── dashboard/
+│   └── Mutual_Fund_Analytics_Dashboard.pbix
+│
+├── reports/
+│
+├── README.md
+└── requirements.txt
 ```
-
----
-
-# Project Modules
-
-## 1. Data Ingestion
-
-Completed Tasks
-
-- Created project structure
-- Loaded multiple mutual fund datasets
-- Explored dataset dimensions
-- Checked missing values
-- Validated AMFI scheme codes
-- Fetched live NAV data using MFAPI
-- Generated initial data quality summary
-
-Deliverables
-
-- data_ingestion.py
-- live_nav_fetch.py
-
----
-
-## 2. Data Cleaning & Validation
-
-Completed Tasks
-
-- Removed duplicate records
-- Converted date columns
-- Validated NAV values
-- Cleaned transaction records
-- Standardized categorical data
-- Generated cleaned datasets
-
-Deliverables
-
-- data_cleaning.py
-
----
-
-## 3. Database Development
-
-Completed Tasks
-
-- Designed SQLite database
-- Loaded cleaned datasets
-- Created fact tables
-- Implemented relational schema
-
-Database
-
-- SQLite
-- SQLAlchemy
-
-Deliverables
-
-- bluestock_mf.db
-- schema.sql
-
----
-
-## 4. SQL Analytics
-
-Implemented analytical SQL queries for:
-
-- Top Funds by AUM
-- Average NAV
-- Fund Performance
-- State-wise Transactions
-- SIP Analysis
-- Category Analysis
-- Gender Analysis
-- Risk Grade Distribution
-- City-wise Transactions
-- Expense Ratio Analysis
-
-Deliverables
-
-- queries.sql
-
----
-
-## 5. Exploratory Data Analysis (EDA)
-
-Performed:
-
-- NAV Trend Analysis
-- Fund Category Analysis
-- AUM Analysis
-- Portfolio Analysis
-- Investor Transaction Analysis
-- Benchmark Comparison
-- Alpha & Beta Analysis
-- Business Insights
-
-Notebook
-
-- EDA_Analysis.ipynb
-
----
-
-## 6. Performance Analytics
-
-Implemented:
-
-- Fund Performance Comparison
-- CAGR Analysis
-- Rolling Returns
-- Benchmark Comparison
-- Fund Ranking
-- Top Performing Funds
-
-Notebook
-
-- Performance_Analytics.ipynb
-
----
-
-## 7. Power BI Dashboard
-
-Designed an interactive Power BI dashboard consisting of four pages:
-
-### Page 1
-
-Industry Overview
-
-### Page 2
-
-Fund Performance
-
-### Page 3
-
-Investor Analytics
-
-### Page 4
-
-SIP Market Trends
-
-Dashboard Deliverables
-
-- Power BI (.pbix)
-- Dashboard PDF
-- Dashboard Screenshots
-
----
-
-## 8. Advanced Analytics & Risk Metrics
-
-Implemented:
-
-### Historical VaR (95%) & CVaR
-
-- Downside risk estimation
-
-### Rolling 90-Day Sharpe Ratio
-
-- Risk-adjusted return analysis
-
-### Investor Cohort Analysis
-
-- Investor behaviour by joining year
-
-### SIP Continuity Analysis
-
-- Identification of At-Risk investors
-
-### Fund Recommendation System
-
-- Risk-based mutual fund recommendation
-
-### Sector HHI Concentration Analysis
-
-- Portfolio diversification measurement
-
-Notebook
-
-- Advanced_Analytics.ipynb
-
-Python Script
-
-- recommender.py
 
 ---
 
@@ -272,67 +99,210 @@ Python Script
 - Python
 - Pandas
 - NumPy
-- Matplotlib
-- SQL
 - SQLite
 - SQLAlchemy
-- Jupyter Notebook
-- Power BI
+- SQL
 - Requests
+- Power BI
 - Git
 - GitHub
-- VS Code
+
+---
+
+# Project Deliverables
+
+## D1 — ETL Pipeline
+
+✔ Automated ETL Pipeline
+
+- Data Loading
+- Data Validation
+- Missing Value Detection
+- Data Quality Checks
+- Error Handling
+
+Script:
+
+```
+scripts/etl_pipeline.py
+```
+
+---
+
+## D2 — SQLite Database
+
+Created SQLite database with proper schema.
+
+Includes:
+
+- NAV History
+- Fund Performance
+- Investor Transactions
+
+Files
+
+```
+data/db/bluestock_mf.db
+sql/schema.sql
+sql/queries.sql
+```
+
+---
+
+## D3 — Exploratory Data Analysis
+
+Performed detailed EDA including
+
+- Missing Values
+- Distribution Analysis
+- Category Analysis
+- NAV Trends
+- AUM Analysis
+- Investor Behaviour
+
+Notebook
+
+```
+notebooks/03_eda_analysis.ipynb
+```
+
+---
+
+## D4 — Performance Analytics
+
+Calculated financial metrics including
+
+- CAGR
+- Rolling Returns
+- Sharpe Ratio
+- Alpha
+- Beta
+- Benchmark Comparison
+
+Outputs
+
+- CSV Reports
+- Charts
+- Performance Metrics
+
+Notebook
+
+```
+notebooks/04_performance_analytics.ipynb
+```
+
+---
+
+## D5 — Interactive Dashboard
+
+Developed Power BI Dashboard consisting of four pages.
+
+### Dashboard Pages
+
+- Industry Overview
+- Fund Performance
+- Investor Analytics
+- SIP Market Trends
+
+Features
+
+- Interactive Filters
+- KPI Cards
+- Slicers
+- Drill-down Analysis
+- Dynamic Visualizations
+
+---
+
+## D6 — Advanced Analytics
+
+Implemented advanced analytics including
+
+- Value at Risk (VaR)
+- Conditional VaR
+- Cohort Analysis
+- Sector HHI Analysis
+- Rolling Sharpe Ratio
+- Mutual Fund Recommendation Logic
+
+Notebook
+
+```
+notebooks/05_advanced_analytics.ipynb
+```
 
 ---
 
 # Reports Generated
 
+Generated reports include
+
+- Alpha Beta Analysis
 - Benchmark Comparison
-- Rolling Sharpe Chart
-- Top 10 Funds
-- Alpha Beta Report
+- Cohort Analysis
 - Fund Scorecard
-- VaR & CVaR Report
-- Investor Cohort Analysis
+- Rolling Sharpe Ratio
+- Sector Concentration (HHI)
 - SIP Continuity Analysis
-- Sector HHI Analysis
-- Data Dictionary
+- Top 10 Funds
+- Value at Risk (VaR)
 
 ---
 
-# Key Business Insights
+# Dashboard Features
 
-- Identified high-risk mutual funds using Historical VaR and CVaR.
-- Compared funds using Rolling 90-Day Sharpe Ratio.
-- Analyzed investor behaviour through Cohort Analysis.
-- Detected investors likely to discontinue SIPs.
-- Evaluated portfolio diversification using HHI.
-- Built a risk-based mutual fund recommendation system.
-- Developed an interactive Power BI dashboard for business reporting.
+✔ Interactive Slicers
+
+✔ KPI Cards
+
+✔ Trend Analysis
+
+✔ Fund Comparison
+
+✔ Investor Insights
+
+✔ SIP Analysis
+
+✔ Performance Metrics
+
+✔ Professional Theme
 
 ---
 
-# Deliverables
+# Key Features
 
-- EDA_Analysis.ipynb
-- Performance_Analytics.ipynb
-- Advanced_Analytics.ipynb
-- recommender.py
+- End-to-End Data Analytics Project
+- Automated ETL Pipeline
+- Clean Data Processing
 - SQLite Database
-- SQL Files
-- Power BI Dashboard
-- Dashboard PDF
-- Dashboard Screenshots
-- Reports
-- README.md
+- SQL Analytics
+- Exploratory Data Analysis
+- Financial Performance Metrics
+- Risk Analytics
+- Interactive Dashboard
+- Business Insights
 
 ---
 
-# Current Status
+# Future Improvements
 
-**Project Status:** ✅ Completed
+Possible future enhancements include
 
-This capstone project successfully demonstrates an end-to-end Data Analytics workflow using Python, SQL, SQLite, and Power BI for Mutual Fund Analytics.
+- Streamlit Web Application
+- Automated NAV Scheduler
+- Monte Carlo Simulation
+- Portfolio Optimisation
+- Email Report Automation
+
+---
+
+# Requirements
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
@@ -346,10 +316,10 @@ University School of Automation & Robotics
 
 Guru Gobind Singh Indraprastha University (GGSIPU)
 
-Bluestock Fintech Data Analyst Internship – 2026
+Bluestock Fintech Data Analyst Internship — 2026
 
 ---
 
-# Acknowledgement
+# License
 
-This project was completed as part of the Bluestock Fintech Data Analyst Internship Capstone Program to gain practical experience in Data Analytics, Financial Analytics, Business Intelligence, SQL, and Power BI.
+This project was developed for educational and internship purposes under the Bluestock Fintech Data Analyst Internship Program.
