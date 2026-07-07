@@ -274,3 +274,18 @@ def get_all_fund_houses():
     conn.close()
 
     return data
+
+def get_all_categories():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT DISTINCT category
+        FROM fact_performance
+        ORDER BY category
+    """)
+
+    data = [row[0] for row in cursor.fetchall()]
+    conn.close()
+
+    return data
