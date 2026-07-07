@@ -1,7 +1,11 @@
 import sqlite3
 from pathlib import Path
 from auth.security import hash_password
+import os
 
+print("DB PATH:", DB_PATH)
+print("DB EXISTS:", os.path.exists(DB_PATH))
+print("DB SIZE:", Path(DB_PATH).stat().st_size if os.path.exists(DB_PATH) else "NOT FOUND")
 PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
 DB_PATH = PROJECT_DIR / "bluestock_mf.db"
 print(DB_PATH)
