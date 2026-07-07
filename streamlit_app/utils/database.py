@@ -1,11 +1,7 @@
 import sqlite3
 from pathlib import Path
 from auth.security import hash_password
-import os
 
-print("DB PATH:", DB_PATH)
-print("DB EXISTS:", os.path.exists(DB_PATH))
-print("DB SIZE:", Path(DB_PATH).stat().st_size if os.path.exists(DB_PATH) else "NOT FOUND")
 PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
 DB_PATH = PROJECT_DIR / "bluestock_mf.db"
 print(DB_PATH)
@@ -264,53 +260,3 @@ def get_filtered_funds(fund_house="All", category="All", risk="All"):
 
     return funds
 
-def get_all_fund_houses():
-
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        SELECT DISTINCT fund_house
-        FROM fact_performance
-        ORDER BY fund_house
-    """)
-
-    data = [row[0] for row in cursor.fetchall()]
-
-    conn.close()
-
-    return data
-
-def get_all_categories():
-
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        SELECT DISTINCT category
-        FROM fact_performance
-        ORDER BY category
-    """)
-
-    data = [row[0] for row in cursor.fetchall()]
-
-    conn.close()
-
-    return data
-
-def get_all_risk_levels():
-
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        SELECT DISTINCT risk_grade
-        FROM fact_performance
-        ORDER BY risk_grade
-    """)
-
-    data = [row[0] for row in cursor.fetchall()]
-
-    conn.close()
-
-    return data
