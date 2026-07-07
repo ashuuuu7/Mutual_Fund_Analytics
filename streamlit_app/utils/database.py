@@ -260,3 +260,17 @@ def get_filtered_funds(fund_house="All", category="All", risk="All"):
 
     return funds
 
+def get_all_fund_houses():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT DISTINCT fund_house
+        FROM fact_performance
+        ORDER BY fund_house
+    """)
+
+    data = [row[0] for row in cursor.fetchall()]
+    conn.close()
+
+    return data
