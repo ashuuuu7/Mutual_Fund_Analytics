@@ -4,6 +4,7 @@ import os
 SENDER_EMAIL = "bluestock.analytics@gmail.com"
 
 API_KEY = os.getenv("BREVO_API_KEY")
+print("BREVO_API_KEY =", API_KEY)
 
 
 def send_email_otp(receiver_email, otp):
