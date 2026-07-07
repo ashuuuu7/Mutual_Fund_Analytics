@@ -556,6 +556,123 @@ The analysis revealed several valuable insights that can support better investme
 
 ---
 
+# 🌐 Streamlit Web Application
+
+After completing the complete analytics pipeline, SQL analysis, advanced risk analytics, and the Power BI dashboard, the project was further extended into a production-style Streamlit web application.
+
+The objective was to transform the analytical dashboard into an interactive web platform where users can securely log in, explore mutual funds, compare investment options, calculate SIP returns, and access insights through an intuitive interface.
+
+Unlike the Power BI dashboard, the Streamlit application provides real-time interaction, user authentication, search capabilities, and dynamic visualizations backed by the SQLite database.
+
+This extension makes the project more practical and closer to a real-world fintech application.
+
+---
+
+## 🚀 Streamlit Modules
+
+### 🔐 Authentication System
+
+- Secure Login
+- User Registration
+- Logout
+- SHA-256 Password Hashing
+- CAPTCHA Verification
+- Forgot Password
+- Email OTP Verification
+- Password Reset
+- SQLite User Management
+
+### 📊 Dashboard
+
+- KPI Cards
+- NAV Trend
+- Category Distribution
+- Risk Distribution
+- Top Performing Funds
+- Interactive Charts
+
+### 🔍 Fund Explorer
+
+- Smart Fund Search
+- Fund Details
+- Scheme Information
+- Performance Summary
+- Filter Based Exploration
+
+### ⚖️ Compare Funds
+
+- Compare Two Mutual Funds
+- Return Comparison
+- Risk Comparison
+- Expense Ratio Comparison
+- AUM Comparison
+- Performance Charts
+- Winner Recommendation
+
+### 💰 SIP Calculator
+
+- Monthly SIP Planning
+- Estimated Future Value
+- Wealth Gain
+- Adjustable Return Rate
+- Investment Duration Analysis
+
+### ℹ️ About Page
+
+- Project Overview
+- Technologies Used
+- Developer Information
+
+---
+
+
+
+# 📸 Streamlit Application Preview
+
+The following screenshots showcase the major modules of the production-ready Streamlit web application developed for this project.
+
+## 🔐 Login Page
+
+![alt text](image-1.png) , ![alt text](image-2.png)
+
+---
+
+## 📊 Dashboard
+
+![alt text](image-3.png)
+
+---
+
+## 🔍 Fund Explorer
+
+![alt text](image-4.png)
+
+---
+
+## ⚖️ Compare Funds
+
+![alt text](image-5.png)
+
+---
+
+## 🏆 Comparison Result
+
+![alt text](image-6.png)
+
+---
+
+## 💰 SIP Calculator
+
+![alt text](image-7.png)
+
+---
+
+## ℹ️ About Page
+
+![alt text](image-8.png)
+
+---
+
 # 🏆 Project Highlights
 
 ✅ Automated ETL Pipeline

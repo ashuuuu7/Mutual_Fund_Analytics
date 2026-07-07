@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body,
+[class*="css"]{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main Background */
+.stApp{
+    background:#0F172A;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"]{
+    background:#111827;
+    border-right:1px solid #1E293B;
+}
+
+/* Headers */
+h1,h2,h3{
+    color:white;
+}
+
+/* Paragraph */
+p{
+    color:#CBD5E1;
+}
