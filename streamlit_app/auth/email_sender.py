@@ -3,7 +3,9 @@ import os
 
 SENDER_EMAIL = "bluestock.analytics@gmail.com"
 
-API_KEY = os.getenv("BREVO_API_KEY")
+import streamlit as st
+
+API_KEY = st.secrets["BREVO_API_KEY"]
 print("BREVO_API_KEY =", API_KEY)
 
 
