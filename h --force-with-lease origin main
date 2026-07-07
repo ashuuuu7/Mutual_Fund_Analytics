@@ -1,5 +1,5 @@
 import requests
-import os
+import os 
 
 SENDER_EMAIL = "bluestock.analytics@gmail.com"
 
