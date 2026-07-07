@@ -1,9 +1,11 @@
+streamlit
 pandas
 numpy
 matplotlib
 seaborn
-plotly
+plotly==6.1.2
 sqlalchemy
 requests
 scipy
 jupyter
+bcrypt
