@@ -292,16 +292,17 @@ def get_all_categories():
 
 
 def get_all_risk_levels():
-    conn = get_connection()   # ya jo tumhara connection function hai
+    conn = get_connection()
     cursor = conn.cursor()
 
     cursor.execute("""
-        SELECT DISTINCT risk
-        FROM mutual_funds
-        WHERE risk IS NOT NULL
-        ORDER BY risk
+        SELECT DISTINCT risk_grade
+        FROM fact_performance
+        WHERE risk_grade IS NOT NULL
+        ORDER BY risk_grade
     """)
 
     risks = [row[0] for row in cursor.fetchall()]
+
     conn.close()
     return risks
