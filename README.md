@@ -16,6 +16,18 @@
 
 **An End-to-End Financial Analytics & Business Intelligence Solution built during the Bluestock Fintech Data Analyst Internship.**
 
+---
+
+## 🌐 Live Demo
+
+🔗 https://bluestockfinanceashutosh.streamlit.app
+
+---
+
+## 📂 GitHub Repository
+
+🔗 https://github.com/ashuuuu7/Mutual_Fund_Analytics
+
 </div>
 
 ---
@@ -693,6 +705,11 @@ The following screenshots showcase the major modules of the production-ready Str
 
 ✅ Professional Technical Documentation
 
+✅ Production-Ready Streamlit Web Application
+
+✅ Live Deployment on Streamlit Cloud
+
+✅ Secure User Authentication with OTP Verification
 ---
 
 # 📦 Final Deliverables
@@ -709,6 +726,8 @@ The following screenshots showcase the major modules of the production-ready Str
 | Final Report | ✅ Completed |
 | Presentation | ✅ Completed |
 | GitHub Repository | ✅ Completed |
+| Streamlit Web Application | ✅ Completed |
+| Live Deployment | ✅ Completed |
 
 ---
 
@@ -792,12 +811,14 @@ This project successfully demonstrates an end-to-end Data Analytics workflow app
 
 Potential future enhancements include:
 
-- 🌐 Streamlit Web Application
+Potential future enhancements include:
+
+- ✅ Streamlit Web Application (Completed)
+- ✅ Cloud Deployment (Completed)
 - ⏰ Automated NAV Scheduler (Cron Jobs)
 - 📈 Monte Carlo Simulation
 - 📊 Markowitz Efficient Frontier
 - 📧 Automated Email Reporting
-- ☁️ Cloud Deployment
 - 🤖 Machine Learning-based Fund Recommendation
 - 🔗 REST API Integration
 - 📱 Mobile Dashboard Support
@@ -852,6 +873,9 @@ Potential future enhancements include:
 University School of Automation & Robotics
 
 Guru Gobind Singh Indraprastha University (GGSIPU)
+### 🌐 Live Project
+
+https://bluestockfinanceashutosh.streamlit.app
 
 ### 📬 Connect with Me
 
