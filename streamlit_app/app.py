@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+from modules.portfolio_optimizer import show_portfolio_optimizer
 from modules.about import show_about
 from auth.login import login
 from dashboard.dashboard import show_dashboard
+from reports.weekly_report import generate_html_report
+from auth.email_sender import send_weekly_report
 from utils.database import (
     create_users_table,
     get_filtered_funds,
@@ -13,6 +16,7 @@ from utils.database import (
     get_all_categories,
     get_all_risk_levels
 )
+from modules.monte_carlo import show_monte_carlo
 import plotly.express as px
 from auth.signup import signup
 from auth.logout import logout
@@ -62,6 +66,9 @@ page = st.sidebar.radio(
         "🔍 Fund Explorer",
         "⚖️ Compare Funds",
         "💰 SIP Calculator",
+        "🎲 Monte Carlo Simulation",
+        "📊 Portfolio Optimizer",
+        "📧 Weekly Report",
         "ℹ️ About"
     ]
 )
@@ -471,6 +478,26 @@ elif page == "💰 SIP Calculator":
         st.metric("1Y Return", "17.8%")
         st.metric("Risk", "Moderate")
         st.metric("Expense Ratio", "0.91%")
+
+elif page == "🎲 Monte Carlo Simulation":
+    show_monte_carlo()
+
+elif page == "📊 Portfolio Optimizer":
+    show_portfolio_optimizer()
+
+elif page == "📧 Weekly Report":
+
+    st.title("📧 Weekly Performance Report")
+
+    email = st.text_input("Enter Email Address")
+
+    if st.button("Send Weekly Report"):
+
+        html = generate_html_report()
+
+        send_weekly_report(email, html)
+
+        st.success("✅ Weekly report sent successfully!")
 
 elif page == "ℹ️ About":
     show_about()

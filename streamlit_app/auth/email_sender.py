@@ -58,3 +58,47 @@ Bluestock Mutual Fund Analytics
     except Exception as e:
         print(e)
         return False
+
+def send_weekly_report(receiver_email, html_report):
+
+    url = "https://api.brevo.com/v3/smtp/email"
+
+    headers = {
+        "accept": "application/json",
+        "api-key": API_KEY,
+        "content-type": "application/json"
+    }
+
+    payload = {
+        "sender": {
+            "name": "Bluestock Mutual Fund Analytics",
+            "email": SENDER_EMAIL
+        },
+        "to": [
+            {
+                "email": receiver_email
+            }
+        ],
+        "subject": "📊 Weekly Mutual Fund Analytics Report",
+
+        "htmlContent": html_report
+    }
+
+    try:
+
+        response = requests.post(
+            url,
+            headers=headers,
+            json=payload
+        )
+
+        print(response.status_code)
+        print(response.text)
+
+        return response.status_code == 201
+
+    except Exception as e:
+
+        print(e)
+
+        return False

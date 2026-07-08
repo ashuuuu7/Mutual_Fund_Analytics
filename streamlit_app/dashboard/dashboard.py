@@ -1,5 +1,7 @@
 import streamlit as st
 from utils.database import get_connection, get_dashboard_kpis
+from reports.weekly_report import generate_html_report
+from auth.email_sender import send_weekly_report
 from datetime import datetime
 import pandas as pd
 import numpy as np
@@ -190,4 +192,27 @@ def show_dashboard():
         hide_index=True
     )
     
+    st.markdown("---")
+    st.subheader("📧 Weekly Report")
+
+    receiver_email = st.text_input(
+        "Enter email address",
+        value="",
+        placeholder="example@gmail.com"
+    )
+
+    if st.button("📨 Send Weekly Report"):
+
+        if receiver_email.strip() == "":
+            st.warning("Please enter an email address.")
+
+        else:
+            report = generate_html_report()
+
+            if send_weekly_report(receiver_email, report):
+                st.success("✅ Weekly report sent successfully!")
+
+            else:
+                st.error("❌ Failed to send weekly report.")
+
     conn.close()
