@@ -1,10 +1,9 @@
 import sqlite3
 from pathlib import Path
 from auth.security import hash_password
+from pathlib import Path
 
-PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
-DB_PATH = PROJECT_DIR / "bluestock_mf.db"
-print(DB_PATH)
+DB_PATH = Path(__file__).resolve().parent.parent / "bluestock_mf.db"
 
 def get_connection():
     return sqlite3.connect(DB_PATH)
