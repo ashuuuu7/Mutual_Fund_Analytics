@@ -6,8 +6,6 @@ SENDER_EMAIL = "bluestock.analytics@gmail.com"
 import streamlit as st
 
 API_KEY = st.secrets["BREVO_API_KEY"]
-print("BREVO_API_KEY =", API_KEY)
-
 
 def send_email_otp(receiver_email, otp):
 
